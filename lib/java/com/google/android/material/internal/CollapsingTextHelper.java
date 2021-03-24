@@ -835,8 +835,8 @@ public final class CollapsingTextHelper {
     if (textToDraw == null || updateDrawText) {
       textPaint.setTextSize(currentTextSize);
       textPaint.setTypeface(currentTypeface);
-      // Use linear text scaling if we're scaling the canvas
-      textPaint.setLinearText(scale != 1f);
+      // disabled as a tmp fix
+      textPaint.setLinearText(false);
 
       isRtl = calculateIsRtl(text);
       textLayout = createStaticLayout(shouldDrawMultiline() ? maxLines : 1, availableWidth, isRtl);
